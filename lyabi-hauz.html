@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lyabi Hauz</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="bg-black text-white">
+
+        <div class="max-w-6xl mx-auto p-4 flex justify-between items-center">
+
+            <h1 class="text-xl font-bold">Lyabi Hauz</h1>
+
+            <select id="lang" class="text-black p-1 rounded">
+
+                <option value="uz">Uzbek</option>
+                <option value="en">English</option>
+                <option value="ru">Русский</option>
+                <option value="tr">Türkçe</option>
+
+            </select>
+
+        </div>
+
+    </header>
+
+
+    <section class="w-full h-72 md:h-[420px]">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Lyabi-Hovuz_and_Nadir_Divanbegi_Khanqah.jpg/500px-Lyabi-Hovuz_and_Nadir_Divanbegi_Khanqah.jpg"
+            class="w-full h-full object-cover">
+
+    </section>
+
+
+    <section class="max-w-4xl mx-auto p-5">
+
+        <iframe class="w-full h-64 md:h-96 rounded-xl shadow" src="https://www.youtube.com/embed/0V4A" allowfullscreen>
+        </iframe>
+
+
+        <div class="bg-white p-6 rounded-xl shadow mt-6">
+
+            <h2 id="title" class="text-2xl font-bold mb-4"></h2>
+
+            <p id="text" class="leading-relaxed text-gray-700"></p>
+
+        </div>
+
+
+        <div class="mt-8">
+
+            <h3 class="text-xl font-semibold mb-3">Location</h3>
+
+            <iframe class="w-full h-80 rounded-xl" src="https://maps.google.com/maps?q=lyabi%20hauz&output=embed">
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        const data = {
+
+            uz: {
+                title: "Lyabi Hovuz",
+                text: `Lyabi Hovuz Buxoroning eng mashhur va tarixiy maydonlaridan biridir.
+U 17-asrda qurilgan bo‘lib, katta hovuz atrofida joylashgan majmuadan iborat.
+
+Bu yerda Nodir Devonbegi madrasasi va xonaqohi joylashgan.
+Tarixan bu joy savdogarlar, sayohatchilar va mahalliy aholi
+uchun dam olish maskani bo‘lgan.`
+            },
+
+            en: {
+                title: "Lyabi Hauz",
+                text: `Lyabi Hauz is one of the most famous historical squares in Bukhara.
+It was built in the 17th century around a large pool.
+
+The complex includes the Nadir Divan-Begi madrasa and khanqah.
+Historically it was a social center where traders and travelers gathered.`
+            },
+
+            ru: {
+                title: "Ляби Хауз",
+                text: `Ляби Хауз — один из самых известных исторических ансамблей Бухары.
+Он был построен в XVII веке вокруг большого водоема.`
+            },
+
+            tr: {
+                title: "Lyabi Havuz",
+                text: `Lyabi Havuz Buhara'nın en ünlü tarihi meydanlarından biridir.
+17. yüzyılda büyük bir havuz etrafında inşa edilmiştir.`
+            }
+
+        }
+
+        function updateLang(lang) {
+
+            document.getElementById("title").innerText = data[lang].title
+            document.getElementById("text").innerText = data[lang].text
+
+        }
+
+        document.getElementById("lang").addEventListener("change", (e) => {
+
+            updateLang(e.target.value)
+
+        })
+
+        updateLang("uz")
+
+    </script>
+
+</body>
+
+</html>

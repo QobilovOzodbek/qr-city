@@ -1,0 +1,22 @@
+{
+    "poi-kalon": {
+        "video": "https://www.youtube.com/embed/6sY4",
+        "map": "https://maps.google.com/maps?q=poi%20kalon&output=embed",
+        "uz": {
+            "title": "Poi Kalon Majmuasi",
+            "description": "Poi Kalon Buxoro shahrining eng mashhur tarixiy majmualaridan biridir. Majmua Kalon minorasi, Kalon masjidi va Mir Arab madrasasidan iborat."
+        },
+        "en": {
+            "title": "Poi Kalon Complex",
+            "description": "The Poi Kalon complex is one of the most famous historical landmarks of Bukhara. It includes the Kalon Minaret, Kalon Mosque and Mir Arab Madrasah."
+        },
+        "ru": {
+            "title": "Комплекс Пои Калян",
+            "description": "Пои Калян — один из самых известных исторических комплексов Бухары."
+        },
+        "tr": {
+            "title": "Poi Kalon Kompleksi",
+            "description": "Poi Kalon Buhara'nın en ünlü tarihi komplekslerinden biridir."
+        }
+    }
+}
